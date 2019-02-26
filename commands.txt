@@ -1,0 +1,6 @@
+#aws cli command to start instance
+aws ec2 start-instances --instance-id <..>
+#aws cli command to stop instance
+aws ec2 stop-instances --instance-id <..>
+#aws cli command to describe instance
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Placement.AvailabilityZone, State.Name, InstanceId, PublicIpAddress, PublicDnsName]' --output table                                                                                              
